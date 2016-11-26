@@ -1,1 +1,1 @@
-web: gunicorn grind.wsgi --log-file -
+web: gunicorn Grind.wsgi --log-file -
