@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+{% endblock %}
+
+{% block title %}
+    LOGIN
+{% endblock %}
+
+{% block content %}
+    <header class="navbar navbar-default" id="sign-up" role="banner">
+        <div class="navbar-container">
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand" a href="/">
+                    <h2>SPARTAN</h2>
+                </a>
+            </div>
+            <div class="navbar-header pull-right" role="navigation">
+                <a class="btn btn-positive" id="login_button" href="{% url 'register' %}"><h2>REGISTER</h2></a>
+            </div>
+        </div>
+    </header>
+    <div class="login-main-container">
+        <div class="login-view">
+            <div class="col-md-12 col-xs-12">
+                <div class="main-sign-up-form">
+                  <form method="post" action="{% url 'login' %}" enctype="multipart/form-data">
+                      <div class="title-area">
+                          <h3>LOGIN</h3>
+                      </div>
+                      <div class="fields-area">
+                          {% csrf_token %}
+                          {{ form.as_p }}
+                      </div>
+                      <div class="registration-area">
+                          <button class="btn-btn-positive" type="submit" value="Log In" href="{% url 'home' %}"><h4>LOGIN</h4></button>
+                          <button class="btn btn-positive" href="{% url 'password_reset' %}"><h4>FORGOT YOUR PASSWORD?</h4></button>
+                      </div>
+                  </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

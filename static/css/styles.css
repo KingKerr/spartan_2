@@ -1,0 +1,325 @@
+/* Global Styles */
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Abel', sans-serif;
+}
+
+
+div {
+    display: block;
+}
+
+header {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+
+    }
+}
+
+.container {
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    display: block;
+}
+
+footer.bs-footer.footer-grp {
+    background-color: black;
+}
+
+footer .row {
+    padding-top: 40px;
+}
+
+footer .col-md-4 {
+    border: none;
+    height: 75px!important;
+    margin-bottom: 15px;
+}
+
+
+footer .content-heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+footer .content-heading h3 {
+    font-size: 18px;
+}
+
+footer .email-me {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+div.social-media-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+div.social-media-container a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+
+div.sub-footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+.sub-footer .insignia {
+    font-size: 11px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    float: left;
+}
+
+/* End of Global Styles */
+
+/* Registration & Login pages */
+@media (min-width: 768px) {
+   .navbar {
+       min-height: 70px;
+       z-index: 1000;
+       zoom: 2;
+   }
+}
+
+
+
+header#sign-up.navbar.navbar-default {
+    background-color: black;
+    border: none;
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-bottom: 0;
+}
+
+.navbar-container {
+    padding-right: 0;
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.navbar-brand {
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 0;
+    margin-left: 20px;
+    color: white;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-container .btn {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+a#login_button.btn.btn-positive {
+    color: white;
+    border-radius: 2px;
+    border: none;
+    line-height: 1.7;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 0;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .main-sign-up-form {
+        margin: 0 auto;
+        width: 540px;
+    }
+}
+
+.login-main-container {
+    top: 65px;
+}
+.col-xs-12 {
+    width: 100%;
+}
+
+form {
+   /* display: block;*/
+    width: 50%;
+    margin: 0 auto;
+}
+
+div.title-area {
+    zoom: 1;
+    padding: 0 40px;
+    position: relative;
+}
+
+.title-area h3 {
+
+}
+
+.fields-area {
+    margin: auto;
+    display: block;
+    zoom: 1;
+    padding: 15px 40px;
+}
+
+.fields-area p {
+    display: block;
+    margin: auto;
+}
+
+.main-sign-up-form .fields-area input {
+    display: block;
+    position: relative;
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.registration-area {
+    display: block;
+    margin: 0 auto;
+}
+/* End of Registration & Login pages */
+
+/* Landing Page */
+
+div#content.header {
+    background-color: black;
+    height: 100px;
+
+}
+
+.navy-container {
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+@media (max-width: 1350px) {
+    .navy-container {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
+
+
+
+div.main-content {
+
+}
+
+div.banner-content {
+    width: 100%;
+}
+
+div.about-container {
+    padding-top: 45px;
+    margin-bottom: 55px;
+}
+
+h2#about {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+div.paragraph-body {
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    line-height: 27px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+div.content-images {
+    width: 100%;
+    margin-bottom: 55px;
+    padding-bottom: 55px;
+}
+
+div.spartan-content {
+    padding-top: 60px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+div.content-heading {
+    text-align: center;
+    padding-top: 40px;
+}
+
+h2#content {
+    font-size: 50px;
+}
+
+.fitness-content {
+    width: 100%;
+    text-align: center;
+    height: 260px;
+    line-height: 250px;
+    vertical-align: middle;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.nutrition-content {
+    width: 100%;
+    text-align: center;
+    height: 260px;
+    line-height: 250px;
+    vertical-align: middle;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.plan-content {
+    width: 100%;
+    text-align: center;
+    height: 260px;
+    line-height: 250px;
+    vertical-align: middle;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.content-paragraph {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+div.content-info2 {
+    width: 100%;
+    padding-bottom: 100%;
+}
+/* End of Landing Page */

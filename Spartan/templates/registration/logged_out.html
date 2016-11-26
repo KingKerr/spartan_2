@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+{% endblock %}
+
+{% block title %}
+    SUCCESSFULLY LOGGED OUT
+{% endblock %}
+
+{% block content %}
+    <header class="navbar navbar-default" id="sign-up" role="banner">
+        <div class="navbar-container">
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand" a href="{% url 'login' %}">
+                    <h2>LOGIN</h2>
+                </a>
+            </div>
+            <div class="navbar-header pull-right" role="navigation">
+                <a class="btn btn-positive" id="login_button" href="{% url 'register' %}"><h2>REGISTER</h2></a>
+            </div>
+        </div>
+    </header>
+    <div class="login-main-container">
+        <div class="login-view">
+            <div class="col-md-12 col-xs-12">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

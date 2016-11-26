@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+{% endblock %}
+
+{% block title %}
+    DASHBOARD
+{% endblock %}
+
+{% block content %}
+    <div class="header" id="content">
+        <div class="navy-container">
+            <div class="navbar navbar-static-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/">
+                        <div class="navbar-brand logo">
+                            <span><h2>SPARTAN</h2></span>
+                        </div>
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right nav-link-grp">
+                        <li>
+                            <a href="{% url 'workouts' %}">
+                                WORKOUTS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'meals' %}">
+                                MEALS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'logout' %}">
+                                LOGOUT
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="user-container">
+        <div class="user-dash">
+            <div class="container">
+                <h2 id="user-dash">DASHBOARD</h2>
+            </div>
+            <div class="user-greeting-container">
+                <div class="user-greeting">
+                    Welcome, {{ user.username }}!
+                    <span id="user-avatar">
+                     {% if user.profile_image %}
+                        <img width="300px" src="{{ user.profile_image.url }}" class="img-rounded">
+                     {% endif %}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="user-panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">YOUR PATH TO GREATNESS STARTS HERE</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" id="user-info">
+                <div class="user-info-dash">
+                    <div class="user-info-heading">
+                        <h3 class="user-info-title">YOUR INFO</h3>
+                    </div>
+                    <table class="table-user">
+                        <tbody class="table-user-info">
+                            <tr class="info-user">
+                                <td class="col-lg-4 user-info-table">FAVORITE HOBBY</td>
+                                <td class="col-lg-8 user-info-value">{{ user.favorite_fitness_hobby }}</td>
+                            </tr>
+                            <tr class="info-user">
+                                <td class="col-lg-4 user-info-table">MY GOALS</td>
+                                <td class="col-lg-8 user-info-value">{{ user.goal }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-8">
+                    <table class="workout-table table">
+                         <thead>
+                            <th>
+                                Upper Body Lift
+                            </th>
+                            <th>
+                                Lower Body Lift
+                            </th>
+                            <th>
+                                Explosive Lift
+                            </th>
+                            <th>
+                                Cardio
+                            </th>
+                            <th>
+                                Speed
+                            </th>
+                            <th>
+                                Skill Work
+                            </th>
+                         </thead>
+                        <tbody>
+                        {% for workout in workouts %}
+                            {% if forloop.counter < 15 %}
+                                <tr>
+                                <td>
+                                    {{ workout.upper_body }}
+                                </td>
+                                <td>
+                                    {{ workout.lower_body }}
+                                </td>
+                                <td>
+                                    {{ workout.explosive }}
+                                </td>
+                                <td>
+                                    {{ workout.cardio }}
+                                </td>
+                                <td>
+                                    {{ workout.speed }}
+                                </td>
+                                <td>
+                                    {{ workout.skill }}
+                                </td>
+                            </tr>
+                            {% endif %}
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+
+
+
+                    <table class="meal-table table">
+                        <thead>
+                            <th>
+                                Nutritional Goal
+                            </th>
+                            <th>
+                                Breakfast
+                            </th>
+                            <th>
+                                Lunch
+                            </th>
+                            <th>
+                                Dinner
+                            </th>
+                            <th>
+                                Caloric Intake
+                            </th>
+                        </thead>
+                        <tbody>
+                        {% for meal in meals %}
+                            {% if forloop.counter < 15 %}
+                                <tr>
+                                <td>
+                                    {{ meal.goal }}
+                                </td>
+                                <td>
+                                    {{ meal.breakfast }}
+                                </td>
+                                <td>
+                                    {{ meal.lunch }}
+                                </td>
+                                <td>
+                                    {{ meal.dinner }}
+                                </td>
+                                <td>
+                                    {{ meal.daily_caloric_intake }}
+                                </td>
+                            </tr>
+                        </tbody>
+                            {% endif %}
+                        {% endfor %}
+
+                    </table>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

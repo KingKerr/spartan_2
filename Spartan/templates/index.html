@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="header" id="content">
+        <div class="navy-container">
+            <div class="navbar navbar-static-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-controls=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/">
+                        <div class="navbar-brand logo">
+                            <span><h2>SPARTAN</h2></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right nav-link-grp">
+                        <li>
+                            <a href="{% url 'register' %}">
+                                SIGN UP
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'login' %}">
+                                LOG IN
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                ABOUT
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="main-container">
+            <div class="banner-content" style="background-image: url({% static "images/crossfit1.jpg" %});">
+                <div class="container">
+                    <div class="main-heading">
+                        <h1>
+                            SPARTAN
+                        </h1>
+                    </div>
+                    <div class="content-body">
+                        <p>TRAINING | NUTRITION | ACHIEVE YOUR GOALS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-container">
+        <div class="container">
+            <h2 id="about">ABOUT SPARTAN</h2>
+        </div>
+        <div class="paragraph-body">
+            <p>SPARTAN IS WHERE YOU CAN TRACK ALL OF YOUR MEALS AND WORKOUTS IN ONE PLACE. MAKE YOUR GOALS A REALITY
+            </p>
+        </div>
+    </div>
+    <div class="content-images">
+        <div class="container">
+            <div class="spartan-content">
+                <div class="col-md-4">
+                    <div class="content-heading">
+                        <h2 id="content">TRAINING</h2>
+                    </div>
+                    <div class="fitness-content">
+                        <div class="content-img" style="background-image: url({% static "images/sprinting1.jpg" %});">
+
+                        </div>
+                    </div>
+                    <div class="content-paragraph">
+                    </div>
+                    <div class="content-text">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-heading">
+                        <h2 id="content">NUTRITION</h2>
+                    </div>
+                    <div class="nutrition-content">
+                        <div class="content-img" style="background-image: url({% static "images/food1.jpg" %});">
+
+                        </div>
+                    </div>
+                    <div class="content-paragraph">
+                    </div>
+                    <div class="content-text">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-heading">
+                        <h2 id="content">PLAN</h2>
+                    </div>
+                    <div class="plan-content">
+                        <div class="content-img" style="background-image: url({% static "images/sprinting4.jpg" %});">
+
+                        </div>
+                    </div>
+                    <div class="content-paragraph">
+                    </div>
+                    <div class="content-text">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-info2">
+        <div class="container">
+            <div class="row">
+                <div class="small-heading">
+                    ACHIEVE YOUR GOALS
+                </div>
+                <div class="content-banner" style="background-image: url({% static "images/womens_crossfit.jpg" %});">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="bs-footer-content" role="contentinfo">
+        <div class="container">
+            <ul class="bs-footer-content-links">
+                <li>
+                    <a href="mailto:Drew.Kerr86@Gmail.com">
+                        <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/KingKerr" target="_blank">
+                        <i class="fa fa-github fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/kingkerr" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://medium.com/@kingkerr" target="_blank">
+                        <i class="fa fa-medium fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://angel.co/drew-kerr" target="_blank">
+                        <i class="fa fa-angellist fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+            <p>
+                &copy; D.Kerr
+            </p>
+        </div>
+    </footer>
+
+{% endblock %}

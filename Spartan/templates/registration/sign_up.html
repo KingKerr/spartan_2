@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+{% endblock %}
+
+{% block title %}
+    SIGN UP
+{% endblock %}
+
+{% block content %}
+    <header class="navbar navbar-default" id="sign-up" role="banner">
+        <div class="navbar-container">
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand" a href="/">
+                    <h2>SPARTAN</h2>
+                </a>
+            </div>
+            <div class="navbar-header pull-right" role="navigation">
+                <a class="btn btn-positive" id="login_button" href="{% url 'login' %}"><h2>LOGIN</h2></a>
+            </div>
+        </div>
+    </header>
+    <div class="login-main-container">
+        <div class="login-view">
+            <div class="col-md-12 col-xs-12">
+                <div class="main-sign-up-form">
+                  <form method="POST" action="" enctype="multipart/form-data">
+                      <input type="hidden" name="next" value="{{ next }}" />
+                        {% csrf_token %}
+                      <div class="title-area">
+                          <h3>Create Your Account</h3>
+                      </div>
+                      <div class="fields-area">
+
+                          {{ form.as_p }}
+                      </div>
+                      <div class="registration-area">
+                          <button class="btn-btn-positive" type="submit" value="Create"><h4>Create Account</h4></button>
+                      </div>
+                  </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
